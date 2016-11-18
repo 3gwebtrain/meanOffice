@@ -1,0 +1,12 @@
+<h1 class="text-center">Welcome to Login</h1>
+<form class="form-signin" ng-submit="main.doLogin()">
+	<h2>Please Login {{main.name}}</h2>
+	<input type="text" class="form-control" ng-model="main.loginData.username" name="username" id="username" placeholder="Enter user name">
+	<input type="password" class="form-control" ng-model="main.loginData.password" name="password" id="password" placeholder="Enter password">
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" value="remember-me"> Remember me
+		</label>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit" >Login</button>
+</form>

@@ -1,0 +1,4 @@
+<h1>Welcome to Users page!</h1>
+<ul>
+	<li ng-repeat="user in users.usersData"><a ui-sref="user({userId:user._id})">{{user.name}}</a></li>
+</ul>

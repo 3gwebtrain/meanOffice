@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Office Admin</title>
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="">
+	<!-- js lib files starts -->
+</head>
+<body ng-app="meanOffice" ng-controller="mainController as main" class="container">
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+				<a class="navbar-brand" href="#">Mean Office</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right container-fluid">
+			<li ng-if="main.loggedIn"><a href="" title="">Welcome {{main.user.name}} !</a></li>
+			<li><a href="" title="">Other contacts</a></li>
+			<li ng-if="main.loggedIn"><a ng-href="#" ng-click='main.doLogout()'>Logout</a></li>
+		</ul>
+	</nav>
+	<div>
+		<ui-view></ui-view>
+	</div>
+	<footer>
+		@copyrights for arif;
+	</footer>
+	<!-- js files starts -->
+	<script src="lib/angular/angular.min.js"></script>
+	<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="app/views/index.module.js"></script>
+	<script src="app/views/index.route.js"></script>
+	<script src="app/views/factories/auth.factory.js"></script>
+	<script src="app/views/factories/authToken.factory.js"></script>
+	<script src="app/views/factories/authInterceptor.factory.js"></script>
+	<script src="app/views/factories/api.factory.js"></script>
+	<script src="app/views/pages/login/mainController.js"></script>
+	<script src="app/views/pages/users/usersController.js"></script>
+	<script src="app/views/pages/user/userController.js"></script>
+</body>
+</html>
